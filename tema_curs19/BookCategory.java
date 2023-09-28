@@ -11,13 +11,12 @@ import java.util.List;
 import org.openqa.selenium.*;
 
 public class BookCategory extends BaseTest {
-	
 	@Test
 	public void CheckBookCategory() {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		
 		WebElement carte = driver.findElement(By.xpath("//a[@href='the-forest']"));
-		List<WebElement> booksCategories =  driver.findElements(By.cssSelector("[class~='.sc_tabs_title']"));
+		List<WebElement> booksCategories =  driver.findElements(By.cssSelector(".sc_tabs_title"));
 		
 		for(WebElement categorie: booksCategories) {
 			categorie.click();
